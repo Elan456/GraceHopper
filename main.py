@@ -19,6 +19,13 @@ def page_handler():
         code.page()
     elif st.session_state["page"] == "discussion":
         discussion.page()
+    elif st.session_state["page"] == "bio":
+        biography = open("biography.md", "r")
+        st.markdown(biography.read())
+
+        if st.button("Go back"):
+            st.session_state["page"] = "landing"
+            st.rerun()
 
     else:
         st.error("Invalid page, you shouldn't be here")

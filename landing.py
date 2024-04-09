@@ -30,6 +30,9 @@ def page():
             if st.button("Have a discussion"):
                 st.session_state["page"] = "discussion"
                 st.rerun()
+            if st.button("Read a biography"):
+                st.session_state["page"] = "bio"
+                st.rerun()
 
     with columns[1]:
         st.image(image_1_address, caption="Grace Hopper", use_column_width=True)

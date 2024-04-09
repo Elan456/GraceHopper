@@ -4,7 +4,7 @@ import datetime
 
 if not os.path.exists('chat_history.txt'):
     with open('chat_history.txt', 'w') as file:
-        file.write("Welcome to the chat!\n")
+        file.write("Welcome to the chat!  \n")
 
 def page():
 
@@ -17,8 +17,9 @@ def page():
 
     if submit_button:
         with open('chat_history.txt', 'a') as file:
-            file.write(f"{datetime.datetime.now().strftime('%m/%d %H:%M')}----{username}: {message}  \n")
+            file.write(f"""({datetime.datetime.now().strftime('%m/%d %H:%M')}) {username}: "{message}"  \n""")
 
+    st.header("Chat History")
     # Display the chat history
     with open('chat_history.txt', 'r') as file:
         chat_history = file.read()

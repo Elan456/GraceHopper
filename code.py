@@ -10,6 +10,7 @@ with open("place_holder_assembly.txt", "r") as file:
 
 def page():
     st.header("High-Level vs Low-Level Programming")
+    st.markdown("---------")
     st.write("Grace Hopper's work helped to bridge the gap between high-level and low-level programming languages.")
     st.write("She developed the first compiler, which allowed programmers to write code in high-level languages, "
              "which are easier to read and write.")
@@ -17,8 +18,8 @@ def page():
              "used for simple arithmetic.")
     st.write("Grace Hopper's work proved them wrong, and she showed that computers could be used for much more than "
                 "simple arithmetic.")
-    st.write("The demo below shows the difference between high-level and low-level programming languages.")
-
+    st.write("The demo below shows the difference between high-level and low-level programming languages. When adding two numbers together.")
+    st.markdown("---------")
 
     # st.header("Try Coding")
     level = st.radio("Select the level of code you want to try", ["High-Level", "Low-Level"])
